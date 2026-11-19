@@ -33,7 +33,15 @@ export async function requestText(url, opts = {}) {
 
   const targets = [{ url, headers: {} }];
   // 自建 Cloudflare Worker 转发优先；只对 NodeSeek 用，避免把其它站塞进去白挨一次 403
-  if (process.env.PROXY_PREFIX && process.env.PROXY_ENABLED === '1' && /nodeseek\.com/i.test(url)) {
+  // 走哪个站的反代由 PROXY_HOSTS 决定（逗号分隔）。原先硬编码只放行 nodeseek，
+  // 现在 LinuxDo 直连会被 Cloudflare 挡、jina 回退又被封 IP，所以也要走反代。
+  const proxyHosts = String(process.env.PROXY_HOSTS ?? 'nodeseek.com')
+    .split(',')
+    .map((h) => h.trim().toLowerCase())
+    .filter(Boolean);
+  const lowerUrl = url.toLowerCase();
+  const needProxy = proxyHosts.some((h) => lowerUrl.includes(h));
+  if (process.env.PROXY_PREFIX && process.env.PROXY_ENABLED === '1' && needProxy) {
     const prefix = process.env.PROXY_PREFIX;
     const sep = prefix.includes('?') ? (prefix.endsWith('?') || prefix.endsWith('=') ? '' : '&') : '?';
     const token = process.env.PROXY_TOKEN ? `${sep}token=${encodeURIComponent(process.env.PROXY_TOKEN)}` : '';
