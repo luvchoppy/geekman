@@ -1,0 +1,28 @@
+name: probe-linuxdo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: install
+        run: pip install --quiet curl_cffi
+      - name: test
+        run: |
+          python - <<'PY'
+          from curl_cffi import requests as cr
+          for imp in ["chrome", "chrome131", "safari"]:
+              try:
+                  r = cr.get("https://linux.do/latest.json?page=0",
+                             impersonate=imp, timeout=25,
+                             headers={"accept": "application/json"})
+                  body = r.text[:120].replace("\n", " ")
+                  print(f"{imp}: HTTP {r.status_code} | {body}")
+              except Exception as e:
+                  print(f"{imp}: EXC {str(e)[:100]}")
+          PY
