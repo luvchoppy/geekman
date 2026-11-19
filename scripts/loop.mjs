@@ -59,7 +59,6 @@ for (let round = 1; round <= ROUNDS; round += 1) {
     ? 'NODESEEK_PAGES=8 NODESEEK_DETAIL=900 '
     : 'NODESEEK_PAGES=4 NODESEEK_DETAIL=200 ';
   const nsOk = run(nsEnv + 'python scripts/fetch-nodeseek.py');
-  log(`  LinuxDo 抓取：${ldOk ? '成功' : '跳过（限流或失败）'}`);
   if (nsOk) {
     nodeSeekFailStreak = 0;
   } else {
@@ -69,6 +68,7 @@ for (let round = 1; round <= ROUNDS; round += 1) {
   // LinuxDo 同样要过 Cloudflare：直连 403、jina 被封，只有 curl_cffi 能过挑战，
   // 但 runner IP 段常被 429，所以失败就静默跳过（fetch-linuxdo.py 自己会退避重试）。
   const ldOk = run('python scripts/fetch-linuxdo.py');
+  log(`  LinuxDo 抓取：${ldOk ? '成功' : '跳过（限流或失败）'}`);
 
   // 被 Cloudflare 限流时不把 RSS 的裸标题灌进队列：那会把正文覆盖率从 ~91% 拉到 ~79%
   run(nsOk ? 'node src/collect.mjs' : 'SKIP_NODESEEK=1 node src/collect.mjs');
