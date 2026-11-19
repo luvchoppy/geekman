@@ -26,7 +26,8 @@ permissions:
 
 concurrency:
   group: forum-collect
-  cancel-in-progress: false
+  # 改成 true：旧 run 长期占锁时，新 run 直接顶掉，避免一直排队
+  cancel-in-progress: true
 
 jobs:
   collect:
