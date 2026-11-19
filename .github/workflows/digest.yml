@@ -61,6 +61,8 @@ jobs:
           LOOP_INTERVAL_MS: '600000'
           PROXY_PREFIX: ${{ vars.PROXY_PREFIX }}
           PROXY_TOKEN: ${{ secrets.PROXY_TOKEN }}
+          PROXY_ENABLED: ${{ vars.PROXY_ENABLED || '0' }}
+          PROXY_HOSTS: ${{ vars.PROXY_HOSTS || 'nodeseek.com' }}
           ENABLE_JINA_FALLBACK: ${{ vars.ENABLE_JINA_FALLBACK || '1' }}
           COLLECT_WINDOW_MINUTES: ${{ vars.COLLECT_WINDOW_MINUTES || '25' }}
           NODESEEK_PAGES: ${{ vars.NODESEEK_PAGES || '4' }}
