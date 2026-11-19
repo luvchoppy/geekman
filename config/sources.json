@@ -23,12 +23,11 @@
     {
       "id": "linuxdo",
       "name": "LinuxDo",
-      "adapter": "discourse",
+      "adapter": "rss",
       "enabled": true,
       "baseUrl": "https://linux.do",
-      "pages": 2,
-      "fetchDetail": true,
-      "detailLimit": 8
+      "feedUrl": "https://linux.do/latest.rss",
+      "windowHours": 24
     },
     {
       "id": "1a2x",
