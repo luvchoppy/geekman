@@ -1,0 +1,43 @@
+name: probe-site
+
+# 临时工具：让 GitHub runner 去抓任意 URL，用来探测无法从本地访问的站点。
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: '要探测的地址'
+        required: true
+        default: 'https://1a2x.com/'
+      mode:
+        description: 'head=响应头+首段 / json=按 JSON 结构分析'
+        default: 'head'
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: fetch
+        run: |
+          echo "URL: ${{ inputs.url }}"
+          curl -sS -D headers.txt -o body.bin --max-time 45 -L \
+            -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" \
+            -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+            "${{ inputs.url }}" || echo "curl exit $?"
+          echo "=========== HEADERS ==========="
+          head -12 headers.txt
+          echo "=========== SIZE ==========="
+          wc -c body.bin
+          if [ "${{ inputs.mode }}" = "json" ]; then
+            echo "=========== JSON SHAPE ==========="
+            jq -r '
+              "top-level keys: \(keys | join(","))",
+              "pagination: \(.pagination | tostring)",
+              "data length: \(.data | length)",
+              "first keys: \(.data[0] | keys | join(","))",
+              "items: \(.data | map({id, t: (.created_at[0:10]), pin: .is_pinned}) | tostring)"
+            ' body.bin 2>&1 | head -20
+          else
+            echo "=========== BODY (first 2000) ==========="
+            head -c 2000 body.bin
+          fi
