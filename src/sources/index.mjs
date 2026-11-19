@@ -1,10 +1,14 @@
 import { fetchDiscourse } from './discourse.mjs';
+import { fetchLinuxdo } from './linuxdo.mjs';
+import { fetchV2ex } from './v2ex.mjs';
 import { fetchGeneric } from './generic.mjs';
 import { fetchNodeseek } from './nodeseek.mjs';
 import { fetchRss } from './rss.mjs';
 
 const ADAPTERS = {
   discourse: fetchDiscourse,
+  linuxdo: fetchLinuxdo,
+  v2ex: fetchV2ex,
   generic: fetchGeneric,
   nodeseek: fetchNodeseek,
   rss: fetchRss,
