@@ -23,10 +23,9 @@
     {
       "id": "linuxdo",
       "name": "LinuxDo",
-      "adapter": "rss",
+      "adapter": "linuxdo",
       "enabled": true,
       "baseUrl": "https://linux.do",
-      "feedUrl": "https://linux.do/latest.rss",
       "windowHours": 24
     },
     {
@@ -38,6 +37,14 @@
       "feedUrl": "https://1a2x.com/rss.xml",
       "windowHours": 24,
       "fetchDetail": false
+    },
+    {
+      "id": "v2ex",
+      "name": "V2EX",
+      "adapter": "v2ex",
+      "enabled": true,
+      "baseUrl": "https://www.v2ex.com",
+      "windowHours": 24
     }
   ]
 }
