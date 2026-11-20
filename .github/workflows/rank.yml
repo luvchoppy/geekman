@@ -1,0 +1,63 @@
+name: daily-ranking
+
+# 每天北京时间 20:00（UTC 12:00）跑一次，生成当天的白嫖排行榜。
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    inputs:
+      day:
+        description: '指定日期 YYYY-MM-DD，留空用今天'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-ranking
+  cancel-in-progress: true
+
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 配置 git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: 生成排行榜
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ vars.TG_CHAT_ID || '6867015060' }}
+          REVIEW_BASE_URL: ${{ vars.REVIEW_BASE_URL || 'https://napi.luvz.top/v1' }}
+          REVIEW_API_KEY: ${{ secrets.LLM_API_KEY }}
+          REVIEW_MODEL: ${{ vars.REVIEW_MODEL || 'deepseek-v4.1-flash-1017' }}
+          REVIEW_MAX_TOKENS: ${{ vars.REVIEW_MAX_TOKENS || '16000' }}
+          QQ_WEBHOOK_URL: ${{ secrets.QQ_WEBHOOK_URL }}
+        run: node src/rank.mjs
+
+      - name: 提交排行榜
+        run: |
+          git add -A data/ranking 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "没有需要提交的变更"
+            exit 0
+          fi
+          git commit -m "chore(ranking): daily ranking [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main >/dev/null 2>&1 || true
+            if git push; then break; fi
+            sleep 3
+          done
