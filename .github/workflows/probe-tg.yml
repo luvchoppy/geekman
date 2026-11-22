@@ -1,0 +1,24 @@
+name: probe-tg
+
+on:
+  workflow_dispatch:
+
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: test
+        env:
+          TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          CHAT: ${{ vars.TG_CHAT_ID || '6867015060' }}
+        run: |
+          echo "token 长度: ${#TOKEN}"
+          echo "--- getMe ---"
+          curl -sS --max-time 20 "https://api.telegram.org/bot$TOKEN/getMe" | head -c 300
+          echo ""
+          echo "--- getUpdates（看有没有人跟它说过话） ---"
+          curl -sS --max-time 20 "https://api.telegram.org/bot$TOKEN/getUpdates?limit=3" | head -c 500
+          echo ""
+          echo "--- sendMessage ---"
+          curl -sS --max-time 20 -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" -d "chat_id=$CHAT" -d "text=排行榜 bot 连通测试"
