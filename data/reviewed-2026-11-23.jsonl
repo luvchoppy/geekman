@@ -5334,3 +5334,15 @@
 {"key":"nodeseek:1074554","sourceId":"nodeseek","id":"1074554","title":"[NQ+TQ]CSTserver CVM EPYC LACN2 X2 CN2 $3.19/m","keep":false,"score":4,"tags":[],"why":"只有价格标题，无正文无链接，无法核实","at":1795468065402}
 {"key":"nodeseek:1075433","sourceId":"nodeseek","id":"1075433","title":"【TQ】欧科EUK 2C4G 50G 无限流量","keep":false,"score":1,"tags":[],"why":"无正文无评论，看不到领取路径，无法判断","at":1795468065402}
 {"key":"1a2x:1300","sourceId":"1a2x","id":"1300","title":"【黑五】VM6 黑五：英国 EPYC VPS 年付 55 折 £27/年起，优惠码 BFVPS55，截止 11 月 30 日","keep":true,"score":8,"tags":["优惠","VPS","黑五"],"why":"优惠码 BFVPS55，年付 55 折，11 月 30 日截止","at":1795468065402}
+{"key":"nodeseek:1075529","sourceId":"nodeseek","id":"1075529","title":"好消息反重力重置了，坏消息Argon独立池没了😂","keep":true,"score":8,"tags":["白嫖","AI额度"],"why":"Antigravity 重置 Gemini 配额，可刷新领免费额度","at":1795468087914}
+{"key":"nodeseek:1075527","sourceId":"nodeseek","id":"1075527","title":"谷歌大善人,又重置了","keep":false,"score":6,"tags":["AI额度"],"why":"仅称额度重置，未给领取路径且无验证","at":1795468087914}
+{"key":"nodeseek:1075528","sourceId":"nodeseek","id":"1075528","title":"反重力重置了 刷新看看","keep":false,"score":6,"tags":["AI额度"],"why":"有刷新提示，但评论区反馈未见重置","at":1795468087914}
+{"key":"1a2x:1299","sourceId":"1a2x","id":"1299","title":"Microsoft Ships Aion Instruct GA: A 2.3B Open-Weights Model Built Into Edge","keep":false,"score":0,"tags":["技术新闻"],"why":"开源模型发布新闻，无直接领取渠道","at":1795468087914}
+{"key":"nodeseek:1075534","sourceId":"nodeseek","id":"1075534","title":"溢价收DMIT 美西 Pro","keep":false,"score":0,"tags":["交易"],"why":"溢价求购二手VPS，与白嫖无关","at":1795468087914}
+{"key":"nodeseek:1075532","sourceId":"nodeseek","id":"1075532","title":"优惠出vmiss tri 9折年付，27年10月21到期。ip正常68段。","keep":false,"score":0,"tags":["交易"],"why":"二手VPS转让交易，不是商家优惠","at":1795468087914}
+{"key":"nodeseek:1075533","sourceId":"nodeseek","id":"1075533","title":"我CV，上了一天班，才知道咸鱼云saltyfish fra.e1.micro 德国 9929 补货了，一看已经没货了","keep":false,"score":0,"tags":["闲聊"],"why":"补货已无货，属于错过闲聊","at":1795468087914}
+{"key":"nodeseek:1075531","sourceId":"nodeseek","id":"1075531","title":"NVIDIA 董事会恢复黄仁勋（Jensen Huang）总裁、首席执行官及董事会成员职务 2026年11月23日","keep":false,"score":0,"tags":["新闻"],"why":"公司人事新闻，与省钱无关","at":1795468087914}
+{"key":"nodeseek:1075507","sourceId":"nodeseek","id":"1075507","title":"老黄回归！","keep":false,"score":0,"tags":["闲聊"],"why":"股市涨跌闲聊，无白嫖信息","at":1795468087914}
+{"key":"nodeseek:1074554","sourceId":"nodeseek","id":"1074554","title":"[NQ+TQ]CSTserver CVM EPYC LACN2 X2 CN2 $3.19/m","keep":false,"score":5,"tags":["疑似优惠"],"why":"仅标题有配置价格，缺链接和优惠码","at":1795468087914}
+{"key":"nodeseek:1075433","sourceId":"nodeseek","id":"1075433","title":"【TQ】欧科EUK 2C4G 50G 无限流量","keep":false,"score":3,"tags":["VPS"],"why":"无正文无价格无领取路径，无法判断能否白嫖","at":1795468087914}
+{"key":"1a2x:1300","sourceId":"1a2x","id":"1300","title":"【黑五】VM6 黑五：英国 EPYC VPS 年付 55 折 £27/年起，优惠码 BFVPS55，截止 11 月 30 日","keep":true,"score":8,"tags":["优惠","VPS"],"why":"黑五 55 折码 BFVPS55，年付 £27 起，有截止日期","at":1795468087914}
