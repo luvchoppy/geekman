@@ -2526,3 +2526,85 @@
 {"key":"v2ex:1259205","sourceId":"v2ex","id":"1259205","title":"qwen.ai 不可用","keep":false,"score":2,"tags":["反馈"],"why":"反馈站点故障，与省钱无关","at":1795426662627}
 {"key":"v2ex:1259203","sourceId":"v2ex","id":"1259203","title":"最近两年是不是都是规模性的流感感冒？？","keep":false,"score":0,"tags":[],"why":"流感闲聊，与白嫖省钱无关","at":1795426662627}
 {"key":"nodeloc:119027","sourceId":"nodeloc","id":"119027","title":"每人三个免费主机","keep":false,"score":0,"tags":[],"why":"免费主机但带邀请链接返利，拉人头一律不要","at":1795426662627}
+{"key":"nodeseek:1074364","sourceId":"nodeseek","id":"1074364","title":"现在claude订阅必弹kyc嘛","keep":false,"score":0,"tags":[],"why":"讨论订阅验证问题，无免费或优惠信息","at":1795426707410}
+{"key":"nodeseek:1074362","sourceId":"nodeseek","id":"1074362","title":"尊贵的好哥哥好姐姐，救救孩子，差98个滞销鸡腿就3级了","keep":false,"score":0,"tags":[],"why":"求鸡腿升级的水贴，无省钱内容","at":1795426707410}
+{"key":"nodeseek:1074359","sourceId":"nodeseek","id":"1074359","title":"Gemini黑5 99刀那个是不是也没有carbon用？","keep":false,"score":0,"tags":[],"why":"讨论订阅权益，无具体优惠或领取方式","at":1795426707410}
+{"key":"nodeseek:1074357","sourceId":"nodeseek","id":"1074357","title":"为什么我的gpt重置额度一直是7天","keep":false,"score":0,"tags":[],"why":"技术故障讨论，与白嫖无关","at":1795426707410}
+{"key":"nodeseek:1074231","sourceId":"nodeseek","id":"1074231","title":"shandun的US优化线路都卖光了吗","keep":false,"score":0,"tags":[],"why":"讨论线路售罄，无免费或优惠信息","at":1795426707410}
+{"key":"nodeseek:1074361","sourceId":"nodeseek","id":"1074361","title":"这就是不烧心的GPT","keep":false,"score":0,"tags":[],"why":"日常吐槽水贴，无白嫖内容","at":1795426707410}
+{"key":"nodeseek:1074358","sourceId":"nodeseek","id":"1074358","title":"直接在小鸡上面装claude code行不行","keep":false,"score":0,"tags":[],"why":"技术讨论，无免费领取渠道","at":1795426707410}
+{"key":"nodeseek:1074343","sourceId":"nodeseek","id":"1074343","title":"终于注册成功了，请问如果快速赚鸡腿呢？","keep":false,"score":0,"tags":[],"why":"求鸡腿升级的水贴，无省钱内容","at":1795426707410}
+{"key":"nodeseek:1074328","sourceId":"nodeseek","id":"1074328","title":"抽奖，3个优惠码。euk 2C2G50G 独立高防IPv4 半价15r/month","keep":false,"score":0,"tags":[],"why":"抽奖送3个优惠码但需加群，中奖率低无验证","at":1795426707410}
+{"key":"nodeseek:1074363","sourceId":"nodeseek","id":"1074363","title":"谷歌 AI 模型 Neon 的使用方式。","keep":false,"score":0,"tags":[],"why":"技术使用讨论，无免费或优惠信息","at":1795426707410}
+{"key":"nodeseek:1074350","sourceId":"nodeseek","id":"1074350","title":"公网被控最好的远程控制是什么？","keep":false,"score":0,"tags":[],"why":"求推荐远程控制，无白嫖信息","at":1795426707410}
+{"key":"nodeseek:1074127","sourceId":"nodeseek","id":"1074127","title":"261116至今 RAKsmart 母鸡被黑心路历程（年轻人的第一个教训是RN，第二个教训是RS🌚）","keep":false,"score":0,"tags":[],"why":"商家被攻击的吐槽，无省钱渠道","at":1795426707410}
+{"key":"nodeseek:1074303","sourceId":"nodeseek","id":"1074303","title":"【NQ】悦阳网络 Joysol 洛杉磯精品B 留档（非原生 IP 版）","keep":false,"score":0,"tags":[],"why":"纯测评留档，未附任何优惠码","at":1795426707410}
+{"key":"nodeseek:1074314","sourceId":"nodeseek","id":"1074314","title":"【提工单去了】瓦工荷兰联通全丢包","keep":false,"score":0,"tags":[],"why":"线路故障求助，非优惠信息","at":1795426707410}
+{"key":"nodeseek:1074279","sourceId":"nodeseek","id":"1074279","title":"反代 Antigravity 老吃风控和 400？用 Rust 做了 TLS + 协议双层对齐，5 天 4500 次实测（附对比 CPA / sub2api）","keep":false,"score":0,"tags":[],"why":"反代工具技术分享，无领取渠道","at":1795426707410}
+{"key":"nodeseek:1074308","sourceId":"nodeseek","id":"1074308","title":"dartnode的99刀独服啥时候出账单哎，这还有7天了，账单一直没有来","keep":false,"score":0,"tags":[],"why":"账单讨论，没有明确的白嫖步骤","at":1795426707410}
+{"key":"nodeseek:1020071","sourceId":"nodeseek","id":"1020071","title":"【出】50R JuHost HongKong VM(NT) Level-1","keep":false,"score":0,"tags":[],"why":"二手VPS出售帖，不省钱反而花钱","at":1795426707410}
+{"key":"nodeseek:1074310","sourceId":"nodeseek","id":"1074310","title":"完了，我忘记一个商家的地址了，nnyidc谁家？","keep":false,"score":0,"tags":[],"why":"找商家地址的求助帖，没有优惠内容","at":1795426707410}
+{"key":"nodeseek:1074259","sourceId":"nodeseek","id":"1074259","title":"真有人能看出A100和G4 GPU吗","keep":false,"score":0,"tags":[],"why":"GPU闲聊，与省钱无关","at":1795426707410}
+{"key":"nodeseek:1074254","sourceId":"nodeseek","id":"1074254","title":"【NQ】VMISS US.LA.TRI.Basic 自测留档","keep":false,"score":0,"tags":[],"why":"机型跑分留档，未提供任何优惠","at":1795426707410}
+{"key":"nodeseek:1074262","sourceId":"nodeseek","id":"1074262","title":"盈透开美区的还是英区的好？","keep":false,"score":0,"tags":[],"why":"讨论海外券商开户选哪个地区，与白嫖省钱无关","at":1795426707410}
+{"key":"nodeseek:1074265","sourceId":"nodeseek","id":"1074265","title":"[已出] 算了，续费完的DMIT EB CORONA，溢价1600。总价1960出了。日期到2027年12月22日","keep":false,"score":0,"tags":[],"why":"出售二手VPS并加价转卖，属于交易帖","at":1795426707410}
+{"key":"nodeseek:1074297","sourceId":"nodeseek","id":"1074297","title":"【收】RN 2C2G Ryzen 7950X KVM VPS 续费13.88$/年","keep":false,"score":0,"tags":[],"why":"求购VPS，属于收购帖，无白嫖信息","at":1795426707410}
+{"key":"nodeseek:1074112","sourceId":"nodeseek","id":"1074112","title":"gemini 4 neon比4 carbon更好用？","keep":false,"score":0,"tags":[],"why":"讨论Gemini模型哪个更好用，属于纯技术闲聊","at":1795426707410}
+{"key":"nodeseek:1074215","sourceId":"nodeseek","id":"1074215","title":"muse破甲能实现吗","keep":false,"score":0,"tags":[],"why":"讨论模型破甲，与省钱白嫖无关","at":1795426707410}
+{"key":"nodeseek:1074206","sourceId":"nodeseek","id":"1074206","title":"【出】云幕 Nimbus Player 终身兑换码（Windows端）","keep":false,"score":0,"tags":[],"why":"出售播放器兑换码，属于二手交易","at":1795426707410}
+{"key":"nodeseek:1074068","sourceId":"nodeseek","id":"1074068","title":"【车找人】Spotify Premium （尼日利亚）年付 55 缺3位","keep":false,"score":0,"tags":[],"why":"组队拼车、拉人入群，属于交易拉群类","at":1795426707410}
+{"key":"nodeseek:1073810","sourceId":"nodeseek","id":"1073810","title":"Claude / Claude Code 防封网络避坑经验：为什么不建议自己手写分流规则","keep":false,"score":0,"tags":[],"why":"这是软性引导购买VPS的防封经验，不是可领优惠","at":1795426707410}
+{"key":"nodeseek:1074211","sourceId":"nodeseek","id":"1074211","title":"【测试留档】VMISS US.LA.TRI.Basic","keep":false,"score":0,"tags":[],"why":"VPS跑分留档评测，无领取渠道","at":1795426707410}
+{"key":"nodeseek:972393","sourceId":"nodeseek","id":"972393","title":"144 8折出Hhost JP 30刀软银","keep":false,"score":0,"tags":[],"why":"8折转手出售VPS，属于二手交易","at":1795426707410}
+{"key":"nodeseek:1074170","sourceId":"nodeseek","id":"1074170","title":"gemini比gpt快好多","keep":false,"score":0,"tags":[],"why":"只是插件和速度体验，没有免费领取渠道","at":1795426707410}
+{"key":"nodeseek:1074185","sourceId":"nodeseek","id":"1074185","title":"Yxvm HK 5$ TQ再测","keep":false,"score":0,"tags":[],"why":"线路测速吐槽，没有优惠或免费","at":1795426707410}
+{"key":"nodeseek:1074152","sourceId":"nodeseek","id":"1074152","title":"Starryblu","keep":false,"score":0,"tags":[],"why":"银行IBAN限制讨论，不涉及省钱","at":1795426707410}
+{"key":"nodeseek:1074147","sourceId":"nodeseek","id":"1074147","title":"拉美国落地用哪家好 电信！","keep":false,"score":0,"tags":[],"why":"求推荐落地方案，属于提问求助","at":1795426707410}
+{"key":"nodeseek:1074101","sourceId":"nodeseek","id":"1074101","title":"【NQ】Aethercloud US.LA.Prime 月付2.2刀","keep":false,"score":0,"tags":[],"why":"跑分测评，没有优惠码、领取路径或有效期","at":1795426707410}
+{"key":"nodeseek:1074099","sourceId":"nodeseek","id":"1074099","title":"部分Outlook/微软邮箱移除辅助邮箱、辅助手机30天后才生效，建议把辅助邮箱尽快改成ns的邮箱","keep":false,"score":0,"tags":[],"why":"邮箱政策提醒，不涉及白嫖或省钱","at":1795426707410}
+{"key":"nodeseek:1074083","sourceId":"nodeseek","id":"1074083","title":"2233撬龟壳失败","keep":false,"score":0,"tags":[],"why":"甲骨文注册失败经历，没有可用渠道","at":1795426707410}
+{"key":"nodeseek:1074039","sourceId":"nodeseek","id":"1074039","title":"【出】剩余价值6折出干杯云商宽pro","keep":false,"score":0,"tags":[],"why":"二手转让，属于交易帖","at":1795426707410}
+{"key":"nodeseek:494569","sourceId":"nodeseek","id":"494569","title":"开一个无人乞讨网站怎么推广","keep":false,"score":0,"tags":[],"why":"推广乞讨网站，属于违规水贴","at":1795426707410}
+{"key":"1a2x:1249","sourceId":"1a2x","id":"1249","title":"用了下反重力，有点厉害的","keep":false,"score":0,"tags":[],"why":"纯体验闲聊，没有白嫖信息","at":1795426707410}
+{"key":"v2ex:1259202","sourceId":"v2ex","id":"1259202","title":"cursor 现在新用户半价没了吗，换了几个号都是如此","keep":false,"score":0,"tags":[],"why":"求助提问，无正文，也未给出任何可领取的优惠信息","at":1795426707410}
+{"key":"v2ex:1259201","sourceId":"v2ex","id":"1259201","title":"做跨境业务时，你们一般怎么选择代理 IP？","keep":false,"score":0,"tags":[],"why":"代理服务推广加返利链接，动机不纯，不建议推送","at":1795426707410}
+{"key":"v2ex:1259200","sourceId":"v2ex","id":"1259200","title":"听到同事的言论，越想越觉得不舒服","keep":false,"score":0,"tags":[],"why":"同事间的吐槽闲聊，与省钱无关","at":1795426707410}
+{"key":"v2ex:1259199","sourceId":"v2ex","id":"1259199","title":"我的瓦工端口又被封了好几天了","keep":false,"score":0,"tags":[],"why":"封端口求助，无白嫖渠道","at":1795426707410}
+{"key":"nodeseek:1074394","sourceId":"nodeseek","id":"1074394","title":"请教一下，有没有居家可做的赚钱项目一个月4000左右就行","keep":false,"score":0,"tags":[],"why":"求赚钱项目的水贴，评论也无有效信息","at":1795426707410}
+{"key":"nodeseek:1074410","sourceId":"nodeseek","id":"1074410","title":"Google的ai的额度是分开的吗","keep":false,"score":0,"tags":[],"why":"询问额度是否分开计算，纯提问","at":1795426707410}
+{"key":"nodeseek:1074408","sourceId":"nodeseek","id":"1074408","title":"[收] 1o机","keep":false,"score":0,"tags":[],"why":"求购二手机器的交易帖，不予收录","at":1795426707410}
+{"key":"nodeseek:1074404","sourceId":"nodeseek","id":"1074404","title":"一折三个月 gemini 20x 有人想上车不","keep":false,"score":0,"tags":[],"why":"拼车拉群且评论预警大封号风险，无具体上车路径","at":1795426707410}
+{"key":"nodeseek:1074376","sourceId":"nodeseek","id":"1074376","title":"反重力里面是可以用cluade吗？","keep":false,"score":0,"tags":[],"why":"询问额度归属的技术提问，无优惠可领","at":1795426707410}
+{"key":"nodeseek:1074372","sourceId":"nodeseek","id":"1074372","title":"收30 USDT，走 BNB Chain（BEP20），有人做吗，多少人民币","keep":false,"score":0,"tags":[],"why":"USDT 场外交易帖，与白嫖无关","at":1795426707410}
+{"key":"nodeseek:1074416","sourceId":"nodeseek","id":"1074416","title":"新人报道","keep":false,"score":0,"tags":[],"why":"新人灌水报道，无任何可白嫖信息","at":1795426707410}
+{"key":"nodeseek:1074373","sourceId":"nodeseek","id":"1074373","title":"求助 GCP 开的谷歌的PRO送的10U每月 搭建小水管 用那个美国区域的节点比较快？","keep":false,"score":0,"tags":[],"why":"求助选节点，非白嫖教程","at":1795426707410}
+{"key":"nodeseek:1074298","sourceId":"nodeseek","id":"1074298","title":"【NQ】KFChost JP T1 40.4$","keep":false,"score":0,"tags":[],"why":"纯跑分测评，无优惠码和领取路径","at":1795426707410}
+{"key":"nodeseek:1074389","sourceId":"nodeseek","id":"1074389","title":"嘘声小问一下","keep":false,"score":0,"tags":[],"why":"闲聊称呼话题，与省钱无关","at":1795426707410}
+{"key":"nodeseek:1074415","sourceId":"nodeseek","id":"1074415","title":"为什么seek.li 要验证多次才能成功","keep":false,"score":0,"tags":[],"why":"吐槽验证问题，无可用信息","at":1795426707410}
+{"key":"nodeseek:1074411","sourceId":"nodeseek","id":"1074411","title":"上班移动网 家里电信网 想问 dmit 收 pro tiny 合适还是 eb 更好？","keep":false,"score":0,"tags":[],"why":"选购求推荐，无优惠力度和渠道","at":1795426707410}
+{"key":"nodeseek:1074346","sourceId":"nodeseek","id":"1074346","title":"大家平常用哪个程序申请域名SSL","keep":false,"score":0,"tags":[],"why":"技术讨论免费SSL工具，未给具体领取步骤","at":1795426707410}
+{"key":"nodeseek:1074412","sourceId":"nodeseek","id":"1074412","title":"动态tw hinet 用在claude可行嘛","keep":false,"score":0,"tags":[],"why":"提问能否用动态IP，非白嫖线索","at":1795426707410}
+{"key":"nodeseek:1074402","sourceId":"nodeseek","id":"1074402","title":"NQ自测 Panstar sgs nano 2.39","keep":false,"score":0,"tags":[],"why":"自测跑分报告，无优惠码或有效期","at":1795426707410}
+{"key":"nodeseek:1074261","sourceId":"nodeseek","id":"1074261","title":"想自己搭日本节点，黑5有性价比高的机子推荐吗？","keep":false,"score":0,"tags":[],"why":"求推荐日本机，评论区称黑五基本没活动","at":1795426707410}
+{"key":"nodeseek:1074400","sourceId":"nodeseek","id":"1074400","title":"2-6 声破天尼区一年老车招人","keep":false,"score":0,"tags":["拼车"],"why":"拼车招人非白嫖，不推","at":1795426707410}
+{"key":"nodeseek:1074348","sourceId":"nodeseek","id":"1074348","title":"AI破甲求助","keep":false,"score":0,"tags":["求助"],"why":"求助贴，无具体免费领取路径","at":1795426707410}
+{"key":"nodeseek:1074399","sourceId":"nodeseek","id":"1074399","title":"这波大会被封的udp端口，是不是没希望解封了？","keep":false,"score":0,"tags":["故障"],"why":"端口故障求助，与省钱无关","at":1795426707410}
+{"key":"nodeseek:1074383","sourceId":"nodeseek","id":"1074383","title":"已出 出cloudcone cc 2c 2g 120g 14.9刀","keep":false,"score":0,"tags":["出售","二手"],"why":"出售二手VPS，非白嫖情报","at":1795426707410}
+{"key":"nodeseek:1074301","sourceId":"nodeseek","id":"1074301","title":"你们 frida薅的google24个月pro都还在吗?","keep":false,"score":0,"tags":["讨论"],"why":"仅讨论订阅是否掉，无领取渠道","at":1795426707410}
+{"key":"nodeseek:1074106","sourceId":"nodeseek","id":"1074106","title":"30出台3.99 raksmart cn2单机","keep":false,"score":0,"tags":["出售","VPS"],"why":"出售二手VPS，非白嫖","at":1795426707410}
+{"key":"nodeseek:1074370","sourceId":"nodeseek","id":"1074370","title":"emby站推荐","keep":false,"score":0,"tags":["求推荐"],"why":"求推荐付费站，非白嫖信息","at":1795426707410}
+{"key":"nodeseek:1074374","sourceId":"nodeseek","id":"1074374","title":"[补货了]白丝云4837补货了","keep":false,"score":0,"tags":["AFF","广告"],"why":"AFF推广链接，按规则拉黑","at":1795426707410}
+{"key":"nodeseek:1074375","sourceId":"nodeseek","id":"1074375","title":"chatgpt会记仇吗？订阅后取消订阅，以后还能再订阅吗？","keep":false,"score":0,"tags":["提问"],"why":"退订提问，无优惠信息","at":1795426707410}
+{"key":"nodeseek:1074345","sourceId":"nodeseek","id":"1074345","title":"有苹果手机或电脑的密码App来设置密码或者验证码吗","keep":false,"score":0,"tags":["闲聊"],"why":"使用体验闲聊，无白嫖内容","at":1795426707410}
+{"key":"nodeseek:1073866","sourceId":"nodeseek","id":"1073866","title":"【VOXI】iphone拉wificalling实测有效极简教程","keep":false,"score":2,"tags":[],"why":"WiFi Calling 配置教程，不涉及免费领取或省钱","at":1795426707410}
+{"key":"nodeseek:1074365","sourceId":"nodeseek","id":"1074365","title":"[人找车]gpt team，长期或者短期","keep":false,"score":0,"tags":[],"why":"拼车求购，无白嫖信息","at":1795426707410}
+{"key":"nodeseek:1074238","sourceId":"nodeseek","id":"1074238","title":"已解决请删帖","keep":false,"score":0,"tags":[],"why":"灰产开盒帖，已申请删帖，不要","at":1795426707410}
+{"key":"nodeseek:1074289","sourceId":"nodeseek","id":"1074289","title":"【DiskQuality】DediRock Storage.Promo.Plus.PMD.2025","keep":false,"score":1,"tags":[],"why":"硬盘跑分测评，无法免费领取东西","at":1795426707410}
+{"key":"nodeseek:1074243","sourceId":"nodeseek","id":"1074243","title":"【出】OVH KS-STOR 16T 上下10G口，德国，IE区账号","keep":false,"score":0,"tags":[],"why":"二手出售服务器，非白嫖","at":1795426707410}
+{"key":"v2ex:1259209","sourceId":"v2ex","id":"1259209","title":"OpenAI 额度又砍了？","keep":false,"score":1,"tags":[],"why":"吐槽额度消耗快，没有免费领取渠道","at":1795426707410}
+{"key":"v2ex:1259208","sourceId":"v2ex","id":"1259208","title":"有人知道网上哪些 kyc 的源头是哪里吗 门户认证和 person kyc","keep":false,"score":0,"tags":[],"why":"KYC 灰产来源询问，风险内容","at":1795426707410}
+{"key":"v2ex:1259207","sourceId":"v2ex","id":"1259207","title":"[开源] 做了两年的魔曰，这次真的把密文藏进了古文里","keep":false,"score":3,"tags":[],"why":"开源加密工具分享，与省钱无关","at":1795426707410}
+{"key":"v2ex:1259206","sourceId":"v2ex","id":"1259206","title":"送几个 MT 的💊，有需要可以留邮箱","keep":true,"score":8,"tags":["赠送","PT"],"why":"免费赠送 MT 邀请码，留邮箱即可申请","at":1795426707410}
+{"key":"v2ex:1259205","sourceId":"v2ex","id":"1259205","title":"qwen.ai 不可用","keep":false,"score":1,"tags":[],"why":"站点可用性反馈，无白嫖内容","at":1795426707410}
+{"key":"v2ex:1259203","sourceId":"v2ex","id":"1259203","title":"最近两年是不是都是规模性的流感感冒？？","keep":false,"score":0,"tags":[],"why":"闲聊流感体感，与白嫖省钱无关","at":1795426707410}
+{"key":"nodeloc:119027","sourceId":"nodeloc","id":"119027","title":"每人三个免费主机","keep":false,"score":0,"tags":[],"why":"免费主机藏在邀请链接推广里，动机不纯，勿推","at":1795426707410}
