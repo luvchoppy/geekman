@@ -5934,3 +5934,6 @@
 {"key":"nodeseek:1081151","sourceId":"nodeseek","id":"1081151","title":"由于存在可疑活动，您通过 Jio 兑换的 Google AI Pro 试用订阅服务已被取消。","keep":false,"score":4,"tags":["避坑","Google AI Pro"],"why":"仅反馈试用被取消，无具体避坑步骤","at":1795644463778}
 {"key":"nodeseek:767498","sourceId":"nodeseek","id":"767498","title":"建议关闭 已经禁言 用户的签名和小尾巴 以默认值代替","keep":false,"score":0,"tags":[],"why":"论坛管理讨论，与白嫖省钱无关","at":1795644463778}
 {"key":"nodeseek:1081153","sourceId":"nodeseek","id":"1081153","title":"【TQ】Lightlayer SG-VP02 过白后","keep":false,"score":3,"tags":["VPS","评测"],"why":"VPS回程测速，无免费领取渠道","at":1795644463778}
+{"key":"nodeseek:1081151","sourceId":"nodeseek","id":"1081151","title":"由于存在可疑活动，您通过 Jio 兑换的 Google AI Pro 试用订阅服务已被取消。","keep":true,"score":8,"tags":["避坑","Google AI Pro"],"why":"Jio兑换AI Pro试用被批量取消，勿上车","at":1795644495317}
+{"key":"nodeseek:767498","sourceId":"nodeseek","id":"767498","title":"建议关闭 已经禁言 用户的签名和小尾巴 以默认值代替","keep":false,"score":0,"tags":[],"why":"论坛管理建议，与白嫖省钱无关","at":1795644495317}
+{"key":"nodeseek:1081153","sourceId":"nodeseek","id":"1081153","title":"【TQ】Lightlayer SG-VP02 过白后","keep":false,"score":0,"tags":[],"why":"纯网络回程测速，无免费或优惠信息","at":1795644495317}
