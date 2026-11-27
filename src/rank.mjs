@@ -114,12 +114,42 @@ async function main() {
     return;
   }
 
-  const sent = readJsonl(dataDir, 'sent', day);
+  // 取数据源：优先今天；今天还没有推送记录（比如 cron 被拖到凌晨跑）就回退到最近有数据的一天，
+  // 不然会像 11-24/25/26 那样连续空跑。
+  let sent = readJsonl(dataDir, 'sent', day);
+  let srcDay = day;
   if (!sent.length) {
-    log('今天没有推送记录，跳过排行榜');
+    const days = fs
+      .readdirSync(dataDir)
+      .map((f) => /^sent-(\d{4}-\d{2}-\d{2})\.jsonl$/.exec(f))
+      .filter(Boolean)
+      .map((m) => m[1])
+      .filter((d) => d < day)
+      .sort()
+      .reverse();
+    for (const d of days.slice(0, 3)) {
+      const cand = readJsonl(dataDir, 'sent', d);
+      if (cand.length) {
+        sent = cand;
+        srcDay = d;
+        log('今天还没有推送记录，改用 ' + d + ' 的数据');
+        break;
+      }
+    }
+  }
+  if (!sent.length) {
+    log('最近几天都没有推送记录，跳过排行榜');
     return;
   }
-  log('今日已推送 ' + sent.length + ' 条，开始排榜');
+  if (srcDay !== day) {
+    // 回退模式下输出文件名用数据所属的日期，幂等判断才有意义
+    const fallbackFile = path.join(dataDir, 'ranking', srcDay + '.md');
+    if (fs.existsSync(fallbackFile) && process.env.FORCE_RANK !== '1') {
+      log(srcDay + ' 的排行榜已存在，跳过');
+      return;
+    }
+  }
+  log('用 ' + srcDay + ' 的 ' + sent.length + ' 条推送记录排榜');
 
   // 回 queue 里补详情：sent 只存了 key 和 score
   const queue = [];
@@ -181,7 +211,7 @@ async function main() {
   }
   picks.sort((a, b) => (b.rank_score ?? 0) - (a.rank_score ?? 0));
 
-  const lines = ['<b>🔥 ' + day + ' 白嫖排行榜</b>', ''];
+  const lines = ['<b>🔥 ' + srcDay + ' 白嫖排行榜</b>', ''];
   picks.forEach((x, idx) => {
     const p = candidates[x.i - 1];
     const medal = ['🥇', '🥈', '🥉'][idx] ?? (idx + 1) + '.';
@@ -223,9 +253,10 @@ async function main() {
     }
   }
 
-  fs.mkdirSync(path.dirname(outFile), { recursive: true });
-  fs.writeFileSync(outFile, body);
-  log('已写入 ' + outFile);
+  const finalFile = path.join(dataDir, 'ranking', srcDay + '.md');
+  fs.mkdirSync(path.dirname(finalFile), { recursive: true });
+  fs.writeFileSync(finalFile, body);
+  log('已写入 ' + finalFile);
 }
 
 main().catch((err) => {
