@@ -25,7 +25,9 @@ permissions:
 
 concurrency:
   group: forum-review
-  cancel-in-progress: false
+  # 改 true：Worker 的定时派发和 collect 结束的 workflow_run 会各拉起一次，
+  # 后启动的那个如果读到的是旧 sent 快照，会把同一批再推一遍（实测一天重复 75 条）。
+  cancel-in-progress: true
 
 jobs:
   review:
@@ -43,6 +45,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # 启动就拉一次最新：并发情况下别人可能刚 push 了 sent 记录，
+          # 不拉会重复推送同一批帖子。
+          git pull --rebase --autostash origin main || true
 
       - name: 增量审核 + 攒够阈值推送
         env:
