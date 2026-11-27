@@ -1,0 +1,64 @@
+name: probe-channels
+
+# 一次性用途：评估 Telegram 频道作为数据源的可行性，跑完即删。
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: install
+        run: pip install --quiet beautifulsoup4 lxml requests
+      - name: scan
+        run: |
+          python - <<'PY'
+          import re, time, requests
+          from bs4 import BeautifulSoup
+          from datetime import datetime, timezone
+
+          CHANNELS = ["baipiaotg","nodeseekc","LycorisStore","zaihuapd","zrj96","geekshare","wzxylh"]
+          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36"}
+
+          for ch in CHANNELS:
+              url = f"https://t.me/s/{ch}"
+              try:
+                  r = requests.get(url, headers=UA, timeout=25)
+              except Exception as e:
+                  print(f"=== {ch} === EXC {str(e)[:80]}")
+                  continue
+              soup = BeautifulSoup(r.text, "lxml")
+              msgs = soup.select(".tgme_widget_message")
+              title_el = soup.select_one(".tgme_channel_info_header_title")
+              sub_el = soup.select_one(".tgme_channel_info_counter .counter_value")
+              name = title_el.get_text(strip=True) if title_el else "?"
+              subs = sub_el.get_text(strip=True) if sub_el else "?"
+              print(f"=== {ch} === HTTP {r.status_code} | 名称: {name} | 订阅: {subs} | 本页消息: {len(msgs)}")
+              times = []
+              for m in msgs[-30:]:
+                  t = m.select_one(".tgme_widget_message_date time")
+                  if t and t.get("datetime"):
+                      times.append(t["datetime"])
+              if times:
+                  print(f"    时间跨度: {times[0]} → {times[-1]}")
+                  # 估算日更量
+                  try:
+                      d0 = datetime.fromisoformat(times[0].replace("Z","+00:00"))
+                      d1 = datetime.fromisoformat(times[-1].replace("Z","+00:00"))
+                      hours = max((d1-d0).total_seconds()/3600, 0.1)
+                      print(f"    密度: {len(times)} 条 / {hours:.1f} 小时 ≈ {len(times)/hours*24:.0f} 条/天")
+                  except Exception:
+                      pass
+              print("    --- 最近 6 条 ---")
+              for m in msgs[-6:]:
+                  txt = m.select_one(".tgme_widget_message_text")
+                  t = m.select_one(".tgme_widget_message_date time")
+                  if not txt: continue
+                  body = re.sub(r"\s+", " ", txt.get_text(" ", strip=True))[:110]
+                  print(f"    [{t['datetime'][:16] if t else '?'}] {body}")
+              print("")
+              time.sleep(2)
+          PY
