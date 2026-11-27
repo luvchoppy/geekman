@@ -83,3 +83,20 @@ jobs:
           done
           echo "push 失败"
           exit 1
+
+      # GitHub 原生 cron 在这个仓库投递率只有 3.5%，排行榜经常被拖到凌晨跑，
+      # 那时当天的推送记录还是空的。review 本身是 Worker 每 30 分钟准点拉起的，
+      # 所以借它的准点能力：落在 UTC 12:00-12:29 这一轮就顺手拉起排行榜。
+      # （北京 20:00 = UTC 12:00）
+      - name: 到点触发当日排行榜
+        if: github.event_name != 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" != "12" ]; then
+            echo "UTC 现在是 ${HOUR} 点，不是排行榜时间，跳过"
+            exit 0
+          fi
+          echo "UTC 12 点，触发排行榜"
+          gh workflow run rank.yml --repo ${{ github.repository }} --ref main || echo "触发失败（可能已有一次在排队）"
