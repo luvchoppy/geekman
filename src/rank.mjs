@@ -105,6 +105,15 @@ const PROMPT = `你是「白嫖情报」的终审编辑。下面是今天已经�
 
 async function main() {
   const day = dayKey();
+
+  // 幂等：同一天只生成一次。Worker 和 GitHub 原生 cron 都可能触发，
+  // 不拦一下会重复推送到 Telegram。手动重跑设 FORCE_RANK=1。
+  const outFile = path.join(dataDir, 'ranking', day + '.md');
+  if (fs.existsSync(outFile) && process.env.FORCE_RANK !== '1') {
+    log('今天的排行榜已存在（' + outFile + '），跳过。要重跑请设 FORCE_RANK=1');
+    return;
+  }
+
   const sent = readJsonl(dataDir, 'sent', day);
   if (!sent.length) {
     log('今天没有推送记录，跳过排行榜');
@@ -214,10 +223,9 @@ async function main() {
     }
   }
 
-  const outDir = path.join(dataDir, 'ranking');
-  fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, day + '.md'), body);
-  log('已写入 data/ranking/' + day + '.md');
+  fs.mkdirSync(path.dirname(outFile), { recursive: true });
+  fs.writeFileSync(outFile, body);
+  log('已写入 ' + outFile);
 }
 
 main().catch((err) => {
