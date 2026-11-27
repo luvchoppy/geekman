@@ -10,6 +10,10 @@ on:
         description: '指定日期 YYYY-MM-DD，留空用今天'
         required: false
         default: ''
+      force:
+        description: '填 1 强制重跑（忽略幂等）'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -46,6 +50,7 @@ jobs:
           REVIEW_MODEL: ${{ vars.REVIEW_MODEL || 'deepseek-v4.1-flash-1017' }}
           REVIEW_MAX_TOKENS: ${{ vars.REVIEW_MAX_TOKENS || '16000' }}
           QQ_WEBHOOK_URL: ${{ secrets.QQ_WEBHOOK_URL }}
+          FORCE_RANK: ${{ github.event.inputs.force || '0' }}
         run: node src/rank.mjs
 
       - name: 提交排行榜
