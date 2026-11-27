@@ -166,7 +166,7 @@ async function main() {
     if (!p || seen.has(s.key)) continue;
     seen.add(s.key);
     candidates.push(p);
-    if (candidates.length >= 60) break;
+    if (candidates.length >= 120) break;
   }
   if (!candidates.length) {
     log('推送记录在 queue 里找不到原文，跳过');
