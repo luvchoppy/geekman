@@ -16,6 +16,7 @@
  *   GH_REPO            必填，例如 luvchippy/tgdigest
  *   GH_WORKFLOW        选填，抓取 workflow，默认 digest.yml
  *   GH_REVIEW_WORKFLOW 选填，审核 workflow，默认 review.yml
+ *   GH_RANK_WORKFLOW   选填，排行榜 workflow，默认 rank.yml（由 0 12 * * * 这条 cron 单独触发）
  *   GH_REF             选填，默认 main
  *   GH_ROUNDS          选填，抓取循环轮数，默认 24
  *
@@ -75,6 +76,15 @@ async function dispatchAll(env) {
 
 export default {
   async scheduled(event, env, ctx) {
+    // GitHub 原生 cron 在这个仓库投递率只有 3.5%，排行榜经常被拖到凌晨跑，
+    // 那时当天的推送记录还是空的，等于白跑。所以固定时间点改由这里精确触发。
+    const cron = (event && event.cron) || '';
+    const rankCron = env.GH_RANK_CRON || '0 12 * * *';
+    if (cron === rankCron) {
+      const rankWf = env.GH_RANK_WORKFLOW || 'rank.yml';
+      ctx.waitUntil(dispatch(env, rankWf, {}));
+      return;
+    }
     ctx.waitUntil(dispatchAll(env));
   },
 
