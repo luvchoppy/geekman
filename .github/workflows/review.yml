@@ -89,7 +89,6 @@ jobs:
       # 所以借它的准点能力：落在 UTC 12:00-12:29 这一轮就顺手拉起排行榜。
       # （北京 20:00 = UTC 12:00）
       - name: 到点触发当日排行榜
-        if: github.event_name != 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
